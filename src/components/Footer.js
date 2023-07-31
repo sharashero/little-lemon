@@ -4,8 +4,8 @@ import { navLinks } from '../common';
 function Footer() {
   return (
     <footer>
-      <div>
-        Footer Logo
+      <div className="logo-footer">
+        <img src="LogoPort.png" alt="" />
       </div>
 
       <Nav links={navLinks} />
