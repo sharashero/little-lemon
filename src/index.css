@@ -20,6 +20,8 @@ code {
 
 nav ul {
   display: flex;
+  max-width: 100%;
+  flex-wrap: wrap;
   list-style: none;
 }
 
@@ -35,6 +37,8 @@ nav a {
 header {
   padding: 1rem;
   display: flex;
+  max-width: 100%;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
@@ -42,8 +46,9 @@ header {
 footer {
   padding: 1rem;
   display: flex;
+  max-width: 100%;
+  flex-wrap: wrap;
   align-items: flex-start;
-  justify-content: center;
 }
 
 footer > * {
@@ -64,4 +69,10 @@ footer nav li {
 
 .logo-footer img {
   height: 180px;
+}
+
+@media screen and (min-width: 796px) {
+  footer {
+    justify-content: center;
+  }
 }
