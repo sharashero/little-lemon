@@ -8,14 +8,17 @@ function Footer() {
         <img src="LogoPort.png" alt="" />
       </div>
 
-      <Nav links={navLinks} />
-
       <div>
-        Contacts
+        <span className="footer-cat">Doormat navigation</span>
+        <Nav links={navLinks} />
       </div>
 
       <div>
-        Social Media
+        <span className="footer-cat">Contacts</span>
+      </div>
+
+      <div>
+        <span className="footer-cat">Social Media</span>
       </div>
     </footer>
   );
