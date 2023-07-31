@@ -1,18 +1,10 @@
 import Nav from './Nav';
-
-const navLinks = [
-  { href: '#', name: 'Home' },
-  { href: '#', name: 'About' },
-  { href: '#', name: 'Menu' },
-  { href: '#', name: 'Reservations' },
-  { href: '#', name: 'Order online' },
-  { href: '#', name: 'Login' },
-];
+import { navLinks } from '../common';
 
 function Footer() {
   return (
     <footer>
-      <div >
+      <div>
         Footer Logo
       </div>
 
