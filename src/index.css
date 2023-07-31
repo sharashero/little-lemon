@@ -1,3 +1,17 @@
+:root {
+  --font-display-title: 600 64px 'Markazi Text', serif;
+  --font-sub-title: 600 48px 'Markazi Text', serif;
+  --font-regular-title: 400 40px 'Markazi Text', serif;
+
+  --font-regular: 400 16px 'Karla', sans-serif;
+  --font-call-to-action: 600 18px 'Karla', sans-serif;
+  --font-section-categories: 900 16px 'Karla', sans-serif;
+  --font-card-title: 800 16px 'Karla', sans-serif;
+  --font-section-title: 900 20px 'Karla', sans-serif;
+  --text-transform-section-title: uppercase;
+}
+
+
 *, ::after, ::before {
   margin: 0;
   padding: 0;
@@ -25,9 +39,7 @@ nav ul {
   flex-wrap: wrap;
   list-style: none;
 
-  font-size: 40px;
-  font-weight: 400;
-  font-family: 'Markazi Text', serif;
+  font: var(--font-regular-title);
 }
 
 nav li {
@@ -62,7 +74,7 @@ footer > * {
 
 footer nav ul {
   flex-direction: column;
-  font-size: 18px;
+  font: var(--font-regular);
 }
 
 footer nav li {
