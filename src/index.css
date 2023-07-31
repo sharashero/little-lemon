@@ -88,6 +88,11 @@ footer nav li {
   padding-left: 0;
 }
 
+.container {
+  margin: 0 auto;
+  max-width: 1080px;
+}
+
 .wrapper {
   width: 100%;
 }
