@@ -3,7 +3,7 @@ import { navLinks } from '../common';
 
 function Header() {
   return (
-    <header>
+    <header className="container">
       <div className="logo">
         <img src="Logo.svg" alt="logo" />
       </div>

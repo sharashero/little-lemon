@@ -3,7 +3,7 @@ import { navLinks } from '../common';
 
 function Footer() {
   return (
-    <footer>
+    <footer className="container">
       <div className="logo-footer">
         <img src="LogoPort.png" alt="" />
       </div>
