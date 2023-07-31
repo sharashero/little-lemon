@@ -3,7 +3,7 @@ function Nav({ links }) {
     <nav>
       <ul>
         {links.map(link => (
-          <li>
+          <li key={link.name}>
             <a href={link.href}>
               {link.name}
             </a>
