@@ -1,13 +1,13 @@
 :root {
-  --font-display-title: 600 64px 'Markazi Text', serif;
-  --font-sub-title: 600 48px 'Markazi Text', serif;
+  --font-display-title: 500 64px 'Markazi Text', serif;
+  --font-sub-title: 500 48px 'Markazi Text', serif;
   --font-regular-title: 400 40px 'Markazi Text', serif;
 
   --font-regular: 400 16px 'Karla', sans-serif;
-  --font-call-to-action: 600 18px 'Karla', sans-serif;
-  --font-section-categories: 900 16px 'Karla', sans-serif;
-  --font-card-title: 800 16px 'Karla', sans-serif;
-  --font-section-title: 900 20px 'Karla', sans-serif;
+  --font-call-to-action: 500 18px 'Karla', sans-serif;
+  --font-section-categories: 800 16px 'Karla', sans-serif;
+  --font-card-title: 700 16px 'Karla', sans-serif;
+  --font-section-title: 800 20px 'Karla', sans-serif;
   --text-transform-section-title: uppercase;
 
   --color-primary-green: #495e57;
