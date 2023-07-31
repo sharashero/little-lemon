@@ -88,6 +88,10 @@ footer nav li {
   padding-left: 0;
 }
 
+.rounded {
+  border-radius: 16px;
+}
+
 .logo {
   margin-right: 2rem;
 }
