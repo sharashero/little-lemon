@@ -9,6 +9,13 @@
   --font-card-title: 800 16px 'Karla', sans-serif;
   --font-section-title: 900 20px 'Karla', sans-serif;
   --text-transform-section-title: uppercase;
+
+  --color-primary-green: #495e57;
+  --color-primary-yellow: #f3ce14;
+  --color-secondary-orange: #ee9972;
+  --color-secondary-orange-light: #fbdabb;
+  --color-highlight-light: #edefee;
+  --color-highlight-dark: #333333;
 }
 
 
