@@ -92,6 +92,10 @@ footer nav li {
   width: 100%;
 }
 
+.wrapper:has(footer) {
+  background-color: var(--color-highlight-light);
+}
+
 .rounded {
   border-radius: 16px;
 }
