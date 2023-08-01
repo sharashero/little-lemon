@@ -106,6 +106,10 @@ footer nav li {
   background-color: var(--color-primary-green);
 }
 
+.wrapper:has(.testimonials) {
+  background-color: var(--color-primary-green);
+}
+
 .rounded {
   border-radius: 16px;
 }
@@ -243,4 +247,56 @@ button.btn:active {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+section.testimonials {
+  padding: 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  color: var(--color-highlight-light);
+}
+
+.testimonials h2 {
+  font: var(--font-regular-title);
+  margin-bottom: 1rem;
+}
+
+.testimonials .reviews {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.testimonial {
+  padding: 1rem;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  color: var(--color-highlight-dark);
+  background-color: var(--color-highlight-light);
+}
+
+.testimonial h4 {
+  font: var(--font-card-title);
+}
+
+.testimonial > :not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.testimonial-user {
+  display: flex;
+  align-items: center;
+}
+
+.testimonial-user :first-child {
+  margin-right: 0.25rem;
+}
+
+.testimonial-user img {
+  width: 48px;
+  height: 48px;
 }
