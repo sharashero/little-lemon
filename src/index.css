@@ -300,3 +300,46 @@ section.testimonials {
   width: 48px;
   height: 48px;
 }
+
+.about {
+  padding: 1rem;
+  display: grid;
+  color: var(--color-highlight-dark);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.about h1 {
+  color: var(--color-primary-green);
+  font: var(--font-display-title);
+}
+
+.about h2 {
+  font: var(--font-sub-title);
+}
+
+.about p {
+  margin-top: 3rem;
+  font: var(--font-call-to-action)
+}
+
+.about-images {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.about-images img {
+  width: 55%;
+}
+
+.about-images img:first-child {
+  margin-top: 35%;
+  grid-row-start: 1;
+  grid-column-start: 1;
+}
+
+.about-images img:last-child {
+  margin-left: 40%;
+  grid-row-start: 1;
+  grid-column-start: 1;
+}
