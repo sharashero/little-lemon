@@ -120,6 +120,7 @@ footer nav li {
 
 section.hero {
   padding: 2rem 0;
+  margin-bottom: 8rem;
   color: var(--color-highlight-light);
   display: grid;
   gap: 2rem;
