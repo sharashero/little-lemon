@@ -1,3 +1,5 @@
+import Button from "./Button";
+
 function Hero() {
   return (
     <section className="hero">
@@ -5,7 +7,7 @@ function Hero() {
         <h1>Little Lemon</h1>
         <h2>Chicago</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab laboriosam dolor natus ut tenetur iusto ullam, voluptate temporibus doloribus fugiat repellat quae impedit odit ratione illum? Eligendi alias velit cumque.</p>
-        <button>Reserve a Table</button>
+        <Button>Reserve a Table</Button>
       </div>
 
       <div className="overflow-img-wrapper">

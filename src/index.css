@@ -154,3 +154,19 @@ section.hero {
   max-width: 480px;
   position: absolute;
 }
+
+button.btn {
+  padding: 1rem;
+  cursor: pointer;
+  font: var(--font-call-to-action);
+  border: 1px solid transparent;
+  background-color: var(--color-primary-yellow);
+}
+
+button.btn:hover {
+  filter: brightness(1.1);
+}
+
+button.btn:active {
+  background-color: var(--color-secondary-orange-light);
+}
