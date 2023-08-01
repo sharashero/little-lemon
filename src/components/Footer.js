@@ -14,7 +14,7 @@ function Footer() {
       </div>
 
       <div>
-        <span className="footer-cat">Contacts</span>
+        <span className="footer-cat">Contact Us</span>
       </div>
 
       <div>
