@@ -2,7 +2,7 @@ import Button from "./Button";
 
 function Hero() {
   return (
-    <section className="hero">
+    <section className="hero container">
       <div>
         <h1>Little Lemon</h1>
         <h2>Chicago</h2>

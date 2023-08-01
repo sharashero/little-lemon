@@ -1,9 +1,12 @@
 import Hero from "./Hero";
+import BackgroundWrapper from "./BackgroundWrapper";
+
+const WrappedHero = BackgroundWrapper(Hero);
 
 function Main() {
   return (
-    <main className="container">
-      <Hero />
+    <main>
+      <WrappedHero />
     </main>
   );
 }
