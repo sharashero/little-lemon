@@ -147,6 +147,8 @@ section.hero {
 
 .overflow-img-wrapper {
   margin: 0;
+  display: flex;
+  justify-content: end;
   position: relative;
 }
 
