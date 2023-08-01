@@ -156,6 +156,20 @@ section.hero {
   position: absolute;
 }
 
+section.highlights .specials {
+  display: flex;
+  justify-content: space-between;
+}
+
+section.highlights .specials {
+  display: flex;
+  justify-content: space-between;
+}
+
+section.highlights h2 {
+  font: var(--font-sub-title);
+}
+
 button.btn {
   padding: 1rem;
   cursor: pointer;
