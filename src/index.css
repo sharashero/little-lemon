@@ -343,3 +343,10 @@ section.testimonials {
   grid-row-start: 1;
   grid-column-start: 1;
 }
+
+.footer-cat {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--color-primary-green);
+  font: var(--font-call-to-action);
+}

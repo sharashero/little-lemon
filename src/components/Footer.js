@@ -15,10 +15,16 @@ function Footer() {
 
       <div>
         <span className="footer-cat">Contact Us</span>
+        <div>Adress</div>
+        <div>Phone number</div>
+        <div>email@example.com</div>
       </div>
 
       <div>
         <span className="footer-cat">Social Media</span>
+        <div>---</div>
+        <div>---</div>
+        <div>---</div>
       </div>
     </footer>
   );
