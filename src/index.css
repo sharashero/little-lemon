@@ -102,6 +102,10 @@ footer nav li {
   background-color: var(--color-highlight-light);
 }
 
+.wrapper:has(.hero) {
+  background-color: var(--color-primary-green);
+}
+
 .rounded {
   border-radius: 16px;
 }
@@ -112,4 +116,41 @@ footer nav li {
 
 .logo-footer img {
   height: 180px;
+}
+
+section.hero {
+  padding: 2rem 0;
+  color: var(--color-highlight-light);
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.hero h1 {
+  color: var(--color-primary-yellow);
+  font: var(--font-display-title);
+}
+
+.hero h2 {
+  font: var(--font-sub-title);
+}
+
+.hero p {
+  margin: 2rem 0;
+  font: var(--font-regular-title);
+}
+
+section.hero {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.overflow-img-wrapper {
+  margin: 0;
+  position: relative;
+}
+
+.overflow-img {
+  width: 100%;
+  max-width: 480px;
+  position: absolute;
 }
