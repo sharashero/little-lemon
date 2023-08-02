@@ -1,5 +1,5 @@
 import { useEffect, useReducer } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 import HomePage from "./HomePage";
 import BookingPage from "./BookingPage";
 import ConfirmedBooking from './ConfirmedBooking';
@@ -12,6 +12,17 @@ function fetchAPI(date) {
   const available = [...allTimes.slice(0, day), ...allTimes.slice(day + 1)];
 
   return new Promise((resolve) => resolve(available));
+}
+
+function submitAPI(data) {
+  return new Promise((resolve) => {
+    if (Math.random() > 0.4) {
+      resolve(true);
+    }
+    else {
+      resolve(false);
+    }
+  });
 }
 
 export function updateTimes(state, action) {
@@ -34,6 +45,7 @@ export function updateTimes(state, action) {
 }
 
 function Main() {
+  const navigate = useNavigate();
   const [schedle, dispatch] = useReducer(updateTimes, {
     day: new Date(),
     times: []
@@ -46,11 +58,24 @@ function Main() {
     })();
   }, [schedle.day]);
 
+  function submitForm(data) {
+    submitAPI(data).then(success => {
+      if (success)
+        navigate('/booking-confirm');
+    });
+  }
+
   return (
     <main>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/booking" element={<BookingPage availableTimes={schedle.times} onDateChange={dispatch} />} />
+        <Route path="/booking" element={
+          <BookingPage
+            availableTimes={schedle.times}
+            onDateChange={dispatch}
+            onSubmit={submitForm}
+          />
+        } />
         <Route path="/booking-confirm" element={<ConfirmedBooking />} />
       </Routes>
     </main>

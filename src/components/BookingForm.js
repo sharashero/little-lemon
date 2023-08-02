@@ -17,8 +17,7 @@ function BookingForm({ availableTimes, onDateChange, onSubmit }) {
   function handleSubmit(event) {
     event.preventDefault();
     // validate
-    console.log(form);
-    // onSubmit(form);
+    onSubmit(form);
   }
 
   function handleDateChange(event) {
