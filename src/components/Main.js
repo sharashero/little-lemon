@@ -3,20 +3,23 @@ import { Route, Routes } from 'react-router-dom';
 import HomePage from "./HomePage";
 import BookingPage from "./BookingPage";
 
-function updateTimes(state, newDate) {
+export function updateTimes(state, newDate) {
   return state;
 }
 
-function Main() {
-  const [availableTimes, dispatch] = useReducer(updateTimes, [
+export function initializeTimes() {
+  return [
     '17:00',
     '18:00',
     '19:00',
     '20:00',
     '21:00',
     '22:00'
-  ]);
-  
+  ];
+}
+
+function Main() {
+  const [availableTimes, dispatch] = useReducer(updateTimes, null, initializeTimes);
 
   return (
     <main>
