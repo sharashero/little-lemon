@@ -1,11 +1,17 @@
 import { useState } from "react";
 
+const OCCASION = [
+  'Birthday',
+  'Anniversary',
+]
+
+
 function BookingForm({ availableTimes, onSubmit }) {
   const [form, setForm] = useState({
     date: '',
     time: availableTimes[0],
     guests: 0,
-    occasion: '',
+    occasion: OCCASION[0],
   });
 
   function handleSubmit(event) {
@@ -64,8 +70,7 @@ function BookingForm({ availableTimes, onSubmit }) {
         value={form.occasion}
         onChange={handleChange('occasion')}
       >
-          <option>Birthday</option>
-          <option>Anniversary</option>
+          {OCCASION.map(occasion => <option key={occasion}>{occasion}</option>)}
       </select>
 
       <input type="submit" value="Make Your reservation" />
