@@ -6,7 +6,7 @@ const OCCASION = [
 ]
 
 
-function BookingForm({ availableTimes, onSubmit }) {
+function BookingForm({ availableTimes, onDateChange, onSubmit }) {
   const [form, setForm] = useState({
     date: '',
     time: availableTimes[0],
@@ -21,18 +21,10 @@ function BookingForm({ availableTimes, onSubmit }) {
     // onSubmit(form);
   }
 
-  const handleChange = (key) => (event) => {
-    let value;
-    switch (event.target.type) {
-      case 'number':
-        value = event.target.valueAsNumber;
-        break;
-      default:
-        value = event.target.value;
-        break;
-    }
-    setForm({ ...form, [key]: value });
-  };
+  function handleDateChange(event) {
+    setForm({ ...form, 'date': event.target.value });
+    onDateChange(event.target.value);
+  }
 
   return (
     <form className="booking-form" onSubmit={handleSubmit}>
@@ -41,14 +33,14 @@ function BookingForm({ availableTimes, onSubmit }) {
         type="date"
         id="res-date"
         value={form.date}
-        onChange={handleChange('date')}
+        onChange={handleDateChange}
       />
 
       <label htmlFor="res-time">Choose time</label>
       <select
         id="res-time"
         value={form.time}
-        onChange={handleChange('time')}
+        onChange={(event) => setForm({ ...form, 'time': event.target.value })}
       >
           {availableTimes.map(time => <option key={time}>{time}</option>)}
       </select>
@@ -61,14 +53,14 @@ function BookingForm({ availableTimes, onSubmit }) {
         max="10"
         id="guests"
         value={form.guests}
-        onChange={handleChange('guests')}
+        onChange={(event) => setForm({ ...form, 'guests': event.target.valueAsNumber })}
       />
 
       <label htmlFor="occasion">Occasion</label>
       <select
         id="occasion"
         value={form.occasion}
-        onChange={handleChange('occasion')}
+        onChange={(event) => setForm({ ...form, 'occasion': event.target.value })}
       >
           {OCCASION.map(occasion => <option key={occasion}>{occasion}</option>)}
       </select>

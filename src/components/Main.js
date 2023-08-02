@@ -1,10 +1,14 @@
+import { useReducer } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import HomePage from "./HomePage";
 import BookingPage from "./BookingPage";
-import { useState } from 'react';
+
+function updateTimes(state, newDate) {
+  return state;
+}
 
 function Main() {
-  const [availableTimes, setAvailableTimes] = useState([
+  const [availableTimes, dispatch] = useReducer(updateTimes, [
     '17:00',
     '18:00',
     '19:00',
@@ -12,12 +16,13 @@ function Main() {
     '21:00',
     '22:00'
   ]);
+  
 
   return (
     <main>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/booking" element={<BookingPage availableTimes={availableTimes} />} />
+        <Route path="/booking" element={<BookingPage availableTimes={availableTimes} onDateChange={dispatch} />} />
       </Routes>
     </main>
   );
