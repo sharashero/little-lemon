@@ -23,7 +23,7 @@ function BookingForm({ availableTimes, onDateChange, onSubmit }) {
 
   function handleDateChange(event) {
     setForm({ ...form, 'date': event.target.value });
-    onDateChange(event.target.value);
+    onDateChange({type: 'update_day',  value: event.target.value});
   }
 
   return (
