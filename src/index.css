@@ -430,3 +430,11 @@ section.testimonials {
   color: var(--color-primary-green);
   font: var(--font-call-to-action);
 }
+
+.booking-form {
+  display: grid;
+  justify-content: center;
+  max-width: 200px;
+  gap: 20px;
+  margin: auto;
+}
