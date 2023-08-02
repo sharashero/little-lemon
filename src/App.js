@@ -4,14 +4,14 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import BackgroundWrapper from './components/BackgroundWrapper';
 
-const WrappedFooter = BackgroundWrapper(Footer);
-
 function App() {
   return (
     <BrowserRouter>
       <Header />
       <Main />
-      <WrappedFooter />
+      <BackgroundWrapper background="highlight-light">
+        <Footer />
+      </BackgroundWrapper>
     </BrowserRouter>
   );
 }

@@ -2,6 +2,7 @@ import { useEffect, useReducer } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import HomePage from "./HomePage";
 import BookingPage from "./BookingPage";
+import ConfirmedBooking from './ConfirmedBooking';
 
 
 const allTimes = ['16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00'];
@@ -50,6 +51,7 @@ function Main() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/booking" element={<BookingPage availableTimes={schedle.times} onDateChange={dispatch} />} />
+        <Route path="/booking-confirm" element={<ConfirmedBooking />} />
       </Routes>
     </main>
   );

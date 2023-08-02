@@ -1,7 +1,7 @@
-function BackgroundWrapper(Component) {
-  return () => (
-    <div className="wrapper">
-      <Component />
+function BackgroundWrapper({ background, children }) {
+  return (
+    <div className={`wrapper background-${background}`}>
+      {children}
     </div>
   );
 }

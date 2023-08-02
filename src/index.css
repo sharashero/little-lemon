@@ -178,18 +178,6 @@ footer nav li {
   width: 100%;
 }
 
-.wrapper:has(footer) {
-  background-color: var(--color-highlight-light);
-}
-
-.wrapper:has(.hero) {
-  background-color: var(--color-primary-green);
-}
-
-.wrapper:has(.testimonials) {
-  background-color: var(--color-primary-green);
-}
-
 .rounded {
   border-radius: 16px;
 }

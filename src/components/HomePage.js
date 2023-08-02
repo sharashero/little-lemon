@@ -4,15 +4,19 @@ import Testimonials from "./Testimonials";
 import About from "./About";
 import BackgroundWrapper from "./BackgroundWrapper";
 
-const WrappedHero = BackgroundWrapper(Hero);
-const WrappedTestimonials = BackgroundWrapper(Testimonials);
-
 function HomePage() {
   return (
     <>
-      <WrappedHero />
+      <BackgroundWrapper background="primary-green">
+        <Hero />
+      </BackgroundWrapper>
+
       <Highlights />
-      <WrappedTestimonials />
+
+      <BackgroundWrapper background="primary-green">
+        <Testimonials />
+      </BackgroundWrapper>
+
       <About />
     </>
   );
