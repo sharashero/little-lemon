@@ -40,6 +40,86 @@ code {
     monospace;
 }
 
+.background-primary-green {
+  background-color: var(--color-primary-green);
+}
+
+.background-primary-yellow {
+  background-color: var(--color-primary-yellow);
+}
+
+.background-secondary-orange {
+  background-color: var(--color-secondary-orange);
+}
+
+.background-secondary-orange-light {
+  background-color: var(--color-secondary-orange-light);
+}
+
+.background-highlight-light {
+  background-color: var(--color-highlight-light);
+}
+
+.background-highlight-dark {
+  background-color: var(--color-highlight-dark);
+}
+
+.text-primary-green {
+  color: var(--color-primary-green);
+}
+
+.text-primary-yellow {
+  color: var(--color-primary-yellow);
+}
+
+.text-secondary-orange {
+  color: var(--color-secondary-orange);
+}
+
+.text-secondary-orange-light {
+  color: var(--color-secondary-orange-light);
+}
+
+.text-highlight-light {
+  color: var(--color-highlight-light);
+}
+
+.text-highlight-dark {
+  color: var(--color-highlight-dark);
+}
+
+.font-display-title {
+  font: var(--font-display-title);
+}
+
+.font-sub-title {
+  font: var(--font-sub-title);
+}
+
+.font-regular-title {
+  font: var(--font-regular-title);
+}
+
+.font-regular {
+  font: var(--font-regular);
+}
+
+.font-call-to-action {
+  font: var(--font-call-to-action);
+}
+
+.font-section-categories {
+  font: var(--font-section-categories);
+}
+
+.font-card-title {
+  font: var(--font-card-title);
+}
+
+.font-section-title {
+  font: var(--font-section-title);
+}
+
 nav ul {
   display: flex;
   max-width: 100%;
