@@ -196,7 +196,7 @@ section.hero {
   color: var(--color-highlight-light);
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .hero h1 {
@@ -211,10 +211,6 @@ section.hero {
 .hero p {
   margin: 2rem 0;
   font: var(--font-regular-title);
-}
-
-section.hero {
-  grid-template-columns: repeat(2, 1fr);
 }
 
 .overflow-img-wrapper {
@@ -236,11 +232,6 @@ section.highlights {
 
 section.highlights .specials {
   margin: 2rem 0;
-  display: flex;
-  justify-content: space-between;
-}
-
-section.highlights .specials {
   display: flex;
   justify-content: space-between;
 }
@@ -268,6 +259,7 @@ button.btn:active {
 
 .cards {
   display: grid;
+  gap: 1rem;
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
 }
@@ -440,4 +432,38 @@ section.testimonials {
   color: #ff2020;
   font-size: 0.9em;
   margin-top: -0.8rem;
+}
+
+@media (max-width: 1080px) {
+  section.hero {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .overflow-img-wrapper {
+    justify-content: center;
+  }
+
+  .overflow-img {
+    position: relative;
+  }
+
+  .cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .testimonials .reviews {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .about {
+    padding: 1rem;
+    display: grid;
+    color: var(--color-highlight-dark);
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+  }
+
+  section, section.hero {
+    padding: 1rem;
+  }
 }
