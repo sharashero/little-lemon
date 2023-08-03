@@ -16,7 +16,7 @@ function Highlights() {
       </div>
 
       <div className="cards">
-        {cards.map(card => <Card key={card} {...card} />)}
+        {cards.map(card => <Card key={card.title} {...card} />)}
       </div>
     </section>
   );

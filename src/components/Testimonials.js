@@ -12,7 +12,7 @@ function Testimonials() {
     <section className="testimonials container">
       <h2>TESTIMONIALS</h2>
       <div className="reviews">
-        {testimonials.map(item => <Testmonial key={item} {...item} />)}
+        {testimonials.map((item, index) => <Testmonial key={index} {...item} />)}
       </div>
     </section>
   );
