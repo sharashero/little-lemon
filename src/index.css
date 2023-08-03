@@ -426,6 +426,7 @@ section.testimonials {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .invalid-field {
@@ -465,5 +466,10 @@ section.testimonials {
 
   section, section.hero {
     padding: 1rem;
+  }
+
+  .booking-confirm {
+    padding: 10rem 2rem;
+    text-align: center;
   }
 }
