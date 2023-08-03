@@ -9,14 +9,17 @@ const OCCASION = [
 
 
 function BookingForm({ availableTimes, onDateChange, onSubmit }) {
-  const [form, setForm] = useState({
-    date: '',
+  const [formValidation, setFormValidation] = useState({
     dateValid: false,
     dateTouched: false,
-    time: availableTimes[0],
-    guests: 0,
     guestsValid: false,
     guestsTouched: false,
+  });
+
+  const [form, setForm] = useState({
+    date: '',
+    time: availableTimes[0],
+    guests: 0,
     occasion: OCCASION[0],
   });
 
@@ -31,15 +34,17 @@ function BookingForm({ availableTimes, onDateChange, onSubmit }) {
     const reference = new Date(new Date().toDateString());
     const dateValid = new Date(value) >= reference;
 
-    setForm({ ...form, date: value, dateValid });
+    setForm({ ...form, date: value });
+    setFormValidation({...formValidation, dateValid});
     if (dateValid)
       onDateChange({type: 'update_day',  value});
   }
-
+  
   function handleGuestsChange(event) {
     const value = event.target.valueAsNumber;
     const guestsValid = (value > 0 && value < 11);
-    setForm({ ...form, guests: value, guestsValid });
+    setForm({ ...form, guests: value});
+    setFormValidation({...formValidation, guestsValid});
   }
 
   return (
@@ -50,10 +55,10 @@ function BookingForm({ availableTimes, onDateChange, onSubmit }) {
         id="res-date"
         value={form.date}
         onChange={handleDateChange}
-        onBlur={() => setForm({ ...form, dateTouched: true })}
+        onBlur={() => setFormValidation({ ...formValidation, dateTouched: true })}
         required
         />
-      <InvalidFieldMessage show={!form.dateValid && form.dateTouched}>
+      <InvalidFieldMessage show={!formValidation.dateValid && formValidation.dateTouched}>
         <p>Date shouldn't be prior to today</p>
       </InvalidFieldMessage>
 
@@ -76,10 +81,10 @@ function BookingForm({ availableTimes, onDateChange, onSubmit }) {
         id="guests"
         value={form.guests}
         onChange={handleGuestsChange}
-        onBlur={() => setForm({ ...form, guestsTouched: true })}
+        onBlur={() => setFormValidation({ ...formValidation, guestsTouched: true })}
         required
       />
-      <InvalidFieldMessage show={!form.guestsValid && form.guestsTouched}>
+      <InvalidFieldMessage show={!formValidation.guestsValid && formValidation.guestsTouched}>
         <p>Guests should be between 1 and 10</p>
       </InvalidFieldMessage>
 
