@@ -435,3 +435,9 @@ section.testimonials {
   justify-content: center;
   align-items: center;
 }
+
+.invalid-field {
+  color: #ff2020;
+  font-size: 0.9em;
+  margin-top: -0.8rem;
+}
