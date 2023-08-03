@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "./Button";
 
 const OCCASION = [
   'Birthday',
@@ -64,7 +65,9 @@ function BookingForm({ availableTimes, onDateChange, onSubmit }) {
           {OCCASION.map(occasion => <option key={occasion}>{occasion}</option>)}
       </select>
 
-      <input type="submit" value="Make Your reservation" />
+      <Button type="submit">
+        Make Your Reservation
+      </Button>
     </form>
   );
 }
