@@ -1,6 +1,6 @@
-function Button({ children, onClick }) {
+function Button({ children, ...props }) {
   return (
-    <button className="btn rounded" onClick={onClick}>
+    <button className="btn rounded" {...props}>
       {children}
     </button>
   )
