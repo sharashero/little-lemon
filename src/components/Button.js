@@ -1,6 +1,6 @@
 function Button({ children, ...props }) {
   return (
-    <button className="btn rounded" {...props}>
+    <button className="btn rounded" aria-label="on click" {...props}>
       {children}
     </button>
   )
