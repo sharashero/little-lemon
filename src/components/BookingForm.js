@@ -25,8 +25,8 @@ function BookingForm({ availableTimes, onDateChange, onSubmit }) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    // validate
-    onSubmit(form);
+    if (formValidation.dateValid && formValidation.guestsValid)
+      onSubmit(form);
   }
 
   function handleDateChange(event) {
