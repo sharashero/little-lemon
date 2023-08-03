@@ -1,12 +1,14 @@
+import { Link } from 'react-router-dom';
+
 function Nav({ links }) {
   return (
     <nav>
       <ul>
         {links.map(link => (
           <li key={link.name}>
-            <a href={link.href}>
+            <Link to={link.href}>
               {link.name}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
