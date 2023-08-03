@@ -39,3 +39,22 @@ test('Validates BookingForm correct date picking', () => {
   const error = screen.queryByText('Date shouldn\'t be prior to today');
   expect(error).toBeNull();
 });
+
+
+test('Validates BookingForm form submission', () => {
+  const submit = jest.fn();
+  render(
+    <BookingForm availableTimes={['17:00', '18:00']} onDateChange={() => null} onSubmit={submit} />
+  );
+
+  const date = '2030-01-01';
+  fireEvent.change(screen.getByLabelText('Choose date'), {target: {value: date}});
+  fireEvent.change(screen.getByLabelText('Number of guests'), {target: {value: 4}});
+  fireEvent.submit(screen.getByText('Make Your Reservation'));
+  expect(submit).toBeCalledWith({
+    date: date,
+    time: '17:00',
+    guests: 4,
+    occasion: 'Birthday',
+  });
+});
